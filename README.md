@@ -1,1 +1,1 @@
-# E-Commerce-Seeds
+# E-commerce Back End Starter Code
