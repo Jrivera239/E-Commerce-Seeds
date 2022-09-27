@@ -4,7 +4,6 @@ const { Tag, Product, ProductTag } = require('../../models');
 // The `/api/tags` endpoint
 
 router.get('/', (req, res) => {
-  router.get("/", (req, res) => {
     Tag.findAll({
       include: [
         {
@@ -54,7 +53,7 @@ router.get('/', (req, res) => {
     Tag.create({
       tag_name: req.body.tag_name,
     })
-      .then((TagData) => res.jsonTagData))
+      .then((TagData) => res.jsonTagData)
       .catch((err) => {
         console.log(err);
         res.status(500).json(err);
@@ -85,7 +84,7 @@ router.get('/', (req, res) => {
         res.status(500).json({ message: err });
       });
   });
-  
+
   router.delete("/:id", (req, res) => {
     // delete on tag by its `id` value
     Tag.destroy({
@@ -104,7 +103,6 @@ router.get('/', (req, res) => {
         console.log(err);
         res.status(500).json(err);
       });
-
+    })
   
   module.exports = router;
-  

@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
 
   // find all categories //
 
-  Category.finAll({
+  Category.findAll({
     include: [
       {
         model:Product,
